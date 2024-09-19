@@ -15,6 +15,7 @@ with open("/mnt/artifacts/DMM_config.yaml") as yamlfile:
     config = yaml.safe_load(yamlfile)
 
 # Your model parmeters
+user_name = os.environ['DOMINO_USER_NAME']
 external_datasource = config['workbench_datasource_name']
 datasourceType = config['datasource']['type']
 DMM_datasource_name = config['DMM_datasource_name']
@@ -29,10 +30,10 @@ day = date.day
 year = date.year
 
 # Today's scoring file name
-scoring_file_name = "external_iris_scoring_data_{}_{}_{}.csv".format(month, day, year)
+scoring_file_name = "{}_external_iris_scoring_data_{}_{}_{}.csv".format(user_name,month, day, year)
 
 # Today's ground truth file name
-gt_file_name = "external_iris_ground_truth_{}_{}_{}.csv".format(month, day, year)
+gt_file_name = "{}_external_iris_ground_truth_{}_{}_{}.csv".format(user_name,month, day, year)
 
 # Create the "dummy" ground truth dataset
 

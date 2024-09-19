@@ -9,6 +9,7 @@ import yaml
 
 with open("/mnt/artifacts/DMM_config.yaml") as yamlfile:
     config = yaml.safe_load(yamlfile)
+user_name = os.environ['DOMINO_USER_NAME']
 
 data = load_iris()
 
@@ -32,7 +33,7 @@ month = date.month
 day = date.day
 year = date.year
 
-scoring_data.to_csv('/mnt/data/{}/iris_ground_truth_{}_{}_{}.csv'.format(os.environ.get('DOMINO_PROJECT_NAME'), month, day, year), index=False)
+scoring_data.to_csv('/mnt/data/{}/{}_external_iris_scoring_data_{}_{}_{}.csv'.format(os.environ.get('DOMINO_PROJECT_NAME'),user_name, month, day, year), index=False)
 
 scoring_data = scoring_data.values.tolist()
 
