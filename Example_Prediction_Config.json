@@ -1,0 +1,42 @@
+{
+        "variables": [
+                {
+                        "name": "age",
+                        "valueType": "numerical",
+                        "variableType": "feature",
+                        "featureImportance": 0.9
+                },
+                {
+                        "name": "y",
+                        "valueType": "categorical",
+                        "variableType": "prediction"
+                },
+                {
+                        "name": "date",
+                        "valueType": "datetime",
+                        "variableType": "timestamp"
+                },
+                {
+                        "name": "RowId",
+                        "valueType": "string",
+                        "variableType": "row_identifier"
+                }
+        ],
+        "datasetDetails": {
+                "name": "TrainingData.csv",
+                "datasetType": "file",
+                "datasetConfig": {
+                        "path": "TrainingData.csv",
+                        "fileFormat": "csv"
+                },
+                "datasourceName": "abc-shared-bucket",
+                "datasourceType": "s3"
+        },
+        "modelMetadata": {
+                "name": "test_psg",
+                "modelType": "classification",
+                "version": "2",
+                "description": "",
+                "author": "testadmin"
+        }
+}

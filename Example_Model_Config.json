@@ -1,0 +1,45 @@
+{"variables": [
+        {
+            "valueType": "numerical",
+            "variableType": "feature",
+            "name": "petal.length"
+        },
+        {
+            "valueType": "numerical",
+            "variableType": "feature",
+            "name": "sepal.length"
+        },
+        {
+            "valueType": "numerical",
+            "variableType": "feature",
+            "name": "petal.width"
+        },
+        {
+            "valueType": "numerical",
+            "variableType": "feature",
+            "name": "sepal.width"
+        },
+        {
+            "valueType": "categorical",
+            "variableType": "prediction",
+            "name": "variety"
+        }
+    ],
+"datasetDetails": {
+        "name": "iris.csv",
+        "datasetType": "file",
+        "datasetConfig": {
+            "path": "iris.csv",
+            "fileFormat": "csv"
+        },
+        "datasourceName": "dmm-shared-bucket",
+        "datasourceType": "s3"
+    },
+"modelMetadata": {
+        "name": "iris_model",
+        "modelType": "classification",
+        "version": "1.01",
+        "description": "classification_iris_model",
+        "author": "John Doe"
+    }
+}
